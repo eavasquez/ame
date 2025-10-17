@@ -149,10 +149,30 @@
     }
 
     .cta {
+      width: 100vw;               /* Ocupa todo el ancho de la pantalla */
+      margin: 0;                  /* Elimina los márgenes automáticos */
+      max-width: 100%;            /* Ignora el max-width del section general */
       text-align: center;
       padding: 60px 20px;
       background-color: var(--color-principal);
       color: white;
+      box-sizing: border-box;     /* Asegura que padding no expanda el ancho */
+    }
+
+    @media (max-width: 600px) {
+      .cta {
+        padding: 40px 15px;       /* Reduce padding en móviles */
+      }
+
+      .cta h2 {
+        font-size: 1.6rem;        /* Ajusta el tamaño del título */
+      }
+
+      .social-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
     }
 
     .cta h2 {
