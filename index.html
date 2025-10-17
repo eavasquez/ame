@@ -213,7 +213,110 @@
       text-align: center;
       padding: 30px 20px;
     }
+
+    /* Fondo del popup */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* Contenedor del popup */
+    .popup-content {
+      position: relative;
+      background: #fff;
+      border-radius: 20px;
+      max-width: 90%;
+      width: 400px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 0.4s ease;
+    }
+
+    .popup-content img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    .popup-content h2 {
+      color: var(--color-principal);
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+    }
+
+    /* Botón de cierre (X) */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #888;
+      transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      color: var(--color-principal);
+    }
+
+    /* Animación */
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Mostrar popup */
+    .popup-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .popup-content {
+        width: 90%;
+        padding: 15px;
+      }
+
+      .popup-content h2 {
+        font-size: 1.3rem;
+      }
+    }
+
   </style>
+
+  <script>
+  // Mostrar popup al cargar la página
+  window.addEventListener("load", () => {
+    const popup = document.getElementById("popup");
+    const closeBtn = document.getElementById("closePopup");
+
+    popup.classList.add("active");
+
+    closeBtn.addEventListener("click", () => {
+      popup.classList.remove("active");
+    });
+  });
+  </script>
+
 </head>
 <body>
 
