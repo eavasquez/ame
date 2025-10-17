@@ -35,8 +35,10 @@
     }
 
     header {
-      height: 100vh;
-      background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('IMAGEN-FONDO.jpg') no-repeat center center/cover;
+      height: 100vh; /* ocupa toda la altura visible */
+      background: 
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+        url('img/fondologo.png') center center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -374,5 +376,13 @@
       once: true
     });
   </script>
+    <!-- POPUP de Próximos Talleres -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>✨ Próximos talleres ✨</h2>
+      <img src="img/taller.webp" alt="Taller Ame Andalué" />
+    </div>
+</div>
 </body>
 </html>
