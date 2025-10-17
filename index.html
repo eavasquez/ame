@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Âme Andalué - Psicología</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (CSS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yQyZ9NNOaRlm0KX+LBRshPXeVjYz9lEslSx5F8Lm8/N3GKD3kRWmsLa9QrN/mbCj4T0ofwlv02DEcG0Zivh1gA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-principal: #f47fa0;
+      --color-secundario: #ff6f61;
+      --color-fondo: #fff5f7;
+      --color-texto: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('IMAGEN-FONDO.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img.logo {
+      width: 160px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--color-principal);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: var(--color-texto);
+      animation: fadeInUp 1s ease-out 0.5s;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about, .services, .testimonials {
+      text-align: center;
+    }
+
+    .about h2, .services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--color-secundario);
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .service-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      width: 280px;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      background-color: #ffe1ea;
+      color: #222;
+      border-top: 4px solid var(--color-principal);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .testimonials {
+      background: #fce4ec;
+      text-align: center;
+    }
+
+    .testimonial {
+      max-width: 800px;
+      margin: 20px auto;
+      font-style: italic;
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    #contacto iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: var(--color-principal);
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      font-size: 1.8rem;
+      color: var(--color-principal);
+      background: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+      background-color: #ffe1ea;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="/img/logot.png" alt="Logo de Ame Andalué" class="logo">
+    <h1>Âme Andalué</h1>
+    <p>Cultivando el alma desde la psicología humana y cercana</p>
+  </header>
+
+  <section class="about" data-aos="fade-up">
+    <h2>Bienestar emocional con enfoque humano</h2>
+    <p>En Âme Andalué creemos en la conexión profunda entre mente y cuerpo. Nuestra misión es acompañarte en tu camino de crecimiento personal, bienestar y sanación.</p>
+  </section>
+
+  <section class="services" data-aos="fade-up">
+    <h2>Servicios</h2>
+    <div class="service-grid">
+      <div class="service-card"><h3>Atención psicológica<br>desde los 2 años</h3></div>
+      <div class="service-card"><h3>Psicodiagnóstico<br>Infanto Juvenil</h3></div>
+      <div class="service-card"><h3>Test de Rorschach</h3></div>
+      <div class="service-card"><h3>Terapia EMDR</h3></div>
+      <div class="service-card"><h3>Atención psicológica por<br>trauma, autismo y TDA</h3></div>
+      <div class="service-card"><h3>Psicología perinatal,<br>duelo, maternidad</h3></div>
+    </div>
+  </section>
+
+  <section class="testimonials" data-aos="fade-up">
+    <h2>Testimonios</h2>
+    <div class="testimonial">“Gracias a Âme Andalué encontré herramientas para volver a confiar en mí misma. Fue un antes y un después.”</div>
+    <div class="testimonial">“La calidez humana y profesionalismo hacen la diferencia. Recomendado al 100%.”</div>
+  </section>
+
+  <section id="contacto" data-aos="fade-up">
+    <h2 style="text-align:center; color: var(--color-principal); margin-bottom: 20px;">Encuéntranos</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.1630984085768!2d-73.09646153038398!3d-36.85080022511242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669c9010739f557%3A0x3fe9fa239da021f6!2sAme%20Andalue%20-%20Ps.%20Paz%20Hinojosa!5e0!3m2!1ses-419!2scl!4v1760715761964!5m2!1ses-419!2scl" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section class="cta" data-aos="fade-up">
+    <h2>¿Listo para comenzar tu proceso?</h2>
+    <div class="social-icons">
+      <a href="https://wa.me/56986298626" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/ame.andalue/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://encuadrado.com/p/paz-hinojosa" target="_blank" title="Reservar sesión"><i class="fas fa-calendar-alt"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Âme Andalué - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
